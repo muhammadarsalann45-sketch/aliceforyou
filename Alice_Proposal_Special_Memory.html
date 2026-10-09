@@ -1,0 +1,1190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Baby Alice ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: #fff4f8;
+    background: linear-gradient(135deg, #200d29, #51213f, #8d4266);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 6%;
+    background: #210e27;
+    border-bottom: 1px solid #ffffff20;
+}
+
+.logo {
+    color: #ffb5ce;
+    font-size: 23px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+nav a {
+    color: #ffe7f0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ff9fbe;
+}
+
+.hero {
+    min-height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 75px 20px;
+    background:
+        radial-gradient(ellipse at 50% 100%, #ed87a84a, transparent 55%),
+        radial-gradient(ellipse at 10% 15%, #df92c02b, transparent 45%);
+}
+
+.hero-content {
+    max-width: 760px;
+    animation: fadeIn 1.5s ease;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ffd4e3;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: clamp(65px, 13vw, 115px);
+    font-weight: normal;
+    font-style: italic;
+    color: #ffb0cb;
+    text-shadow: 0 0 35px #ff7ba566;
+}
+
+.heart-line {
+    color: #ffb1cd;
+    font-size: 26px;
+    margin: 12px;
+}
+
+.hero p {
+    color: #ffe8f0;
+    line-height: 1.9;
+    font-size: 18px;
+}
+
+.hero h2 {
+    margin: 20px 0 30px;
+    font-size: 29px;
+    font-weight: normal;
+    font-style: italic;
+    color: #ffb1cd;
+}
+
+.btn {
+    display: inline-block;
+    margin: 8px 5px;
+    padding: 14px 27px;
+    border: 1px solid #ffd3e2;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #ff9fbd, #d75d88);
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 25px #ff8eb344;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px #ff8eb377;
+}
+
+.music-button {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 100;
+    margin: 0;
+    padding: 12px 18px;
+    font-size: 14px;
+}
+
+section {
+    padding: 75px 7%;
+    text-align: center;
+    scroll-margin-top: 85px;
+}
+
+.section-title {
+    font-size: clamp(30px, 5vw, 42px);
+    font-weight: normal;
+    color: #ffb7d0;
+    margin-bottom: 20px;
+}
+
+.section-intro {
+    max-width: 720px;
+    margin: 0 auto 35px;
+    line-height: 1.9;
+    color: #f8dce8;
+}
+
+.memories {
+    background: #ffffff08;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.memory-card {
+    padding: 28px 22px;
+    background: #ffffff0c;
+    border: 1px solid #ffffff20;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.memory-card:hover {
+    transform: translateY(-5px);
+    background: #ffffff15;
+}
+
+.emoji {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.memory-card h3 {
+    color: #ffc1d6;
+    margin-bottom: 12px;
+}
+
+.memory-card p {
+    color: #f8dce8;
+    line-height: 1.8;
+}
+
+.letter-section {
+    background: #f5a2c008;
+}
+
+.envelope {
+    max-width: 850px;
+    margin: 35px auto 0;
+    padding: 35px;
+    background: linear-gradient(145deg, #fff0f5, #ffd5e3);
+    color: #74324e;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px #10051350;
+}
+
+.envelope-icon {
+    font-size: 58px;
+    margin-bottom: 15px;
+}
+
+.envelope h3 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.letter {
+    display: none;
+    margin-top: 30px;
+    text-align: left;
+    line-height: 2;
+    font-size: 16px;
+    animation: fadeIn 1s ease;
+}
+
+.letter.show {
+    display: block;
+}
+
+.letter p {
+    margin-bottom: 20px;
+}
+
+.letter strong {
+    color: #b33769;
+}
+
+.promise {
+    background: #160b1c55;
+}
+
+.promise-box {
+    max-width: 800px;
+    margin: 30px auto 0;
+    padding: 35px;
+    border: 1px solid #ffb4ce55;
+    border-radius: 20px;
+    background: #ffffff08;
+}
+
+.promise-box p {
+    line-height: 2;
+    font-size: 18px;
+    color: #ffe4ee;
+}
+
+.question-section {
+    background:
+        radial-gradient(ellipse at top, #d76e9a20, transparent 65%),
+        #1d0c24;
+}
+
+.question-box {
+    max-width: 800px;
+    margin: auto;
+    padding: 35px;
+    border: 1px solid #ffb5d455;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #ffffff0d, #ffb5d40a);
+    box-shadow: 0 15px 45px #00000025;
+}
+
+.question-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.question-label {
+    color: #ffc1d8;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.question-box h2 {
+    font-size: clamp(29px, 5vw, 42px);
+    font-weight: normal;
+    color: #ffb5ce;
+    margin-bottom: 20px;
+}
+
+.question-intro {
+    line-height: 1.9;
+    color: #ffe5ef;
+    margin-bottom: 30px;
+}
+
+.question-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    text-align: left;
+    padding: 20px;
+    margin: 14px 0;
+    border: 1px solid #ffb5d422;
+    border-radius: 15px;
+    background: #ffffff08;
+    transition: 0.3s;
+}
+
+.question-item:hover {
+    background: #ffb5d411;
+    transform: translateY(-2px);
+}
+
+.question-item span {
+    flex-shrink: 0;
+    color: #ff9fc0;
+    font-size: 15px;
+}
+
+.question-item p {
+    line-height: 1.8;
+    color: #fff0f6;
+}
+
+.honest-note {
+    margin: 25px 0;
+    padding: 22px;
+    background: #ffb5d411;
+    border-left: 3px solid #ff9fc0;
+    border-radius: 10px;
+    text-align: left;
+    line-height: 1.9;
+    color: #ffe1ed;
+}
+
+.response-label {
+    display: block;
+    text-align: left;
+    margin: 25px 0 12px;
+    color: #ffbad2;
+    font-size: 19px;
+}
+
+#aliceResponse {
+    width: 100%;
+    padding: 17px;
+    border: 1px solid #ffb5d466;
+    border-radius: 13px;
+    background: #ffffff0b;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.8;
+    resize: vertical;
+    outline: none;
+}
+
+#aliceResponse::placeholder {
+    color: #d8b5c7;
+}
+
+#aliceResponse:focus {
+    border-color: #ff9fc0;
+    box-shadow: 0 0 15px #ff9fc022;
+}
+
+.response-message {
+    margin-top: 18px;
+    line-height: 1.8;
+    color: #ffc1d8;
+    overflow-wrap: anywhere;
+}
+
+.proposal {
+    padding: 100px 7%;
+    background: radial-gradient(ellipse, #a54d7155, transparent 70%);
+}
+
+.ring {
+    font-size: 70px;
+    margin-bottom: 20px;
+    animation: ringGlow 2s infinite alternate;
+}
+
+.proposal h2 {
+    font-size: clamp(32px, 7vw, 55px);
+    color: #ffb1cd;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.proposal p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    line-height: 2;
+}
+
+#proposalMessage {
+    display: none;
+    max-width: 750px;
+    margin: 35px auto 0;
+    padding: 30px;
+    border: 1px solid #ffb4ce66;
+    border-radius: 20px;
+    background: #ffffff10;
+    line-height: 2;
+    animation: fadeIn 1s ease;
+}
+
+#proposalMessage p {
+    margin-top: 20px;
+}
+
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #ffffff20;
+    color: #f8c9da;
+    line-height: 2;
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -35px;
+    color: #ff9cbd;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 0;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.7;
+    }
+    to {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ringGlow {
+    from {
+        transform: scale(1);
+        filter: drop-shadow(0 0 3px #ffb1cd);
+    }
+    to {
+        transform: scale(1.08);
+        filter: drop-shadow(0 0 18px #ff8fb8);
+    }
+}
+
+@media (max-width: 650px) {
+    nav {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    .envelope {
+        padding: 24px 18px;
+    }
+
+    .letter {
+        font-size: 15px;
+    }
+
+    .promise-box,
+    .question-box {
+        padding: 23px 17px;
+    }
+
+    .question-item {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .music-button {
+        right: 10px;
+        bottom: 10px;
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+}
+
+/* EXTRA SURPRISE BOXES */
+.extra-love-section {
+    padding: 75px 20px;
+    background: linear-gradient(135deg, #2a102f, #4b1d3c);
+    text-align: center;
+}
+.extra-love-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    max-width: 1050px;
+    margin: 35px auto 0;
+    text-align: center;
+}
+.extra-love-card {
+    padding: 28px 23px;
+    border: 1px solid #ffb5d455;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #ffffff12, #ffb5d40b);
+    box-shadow: 0 12px 35px #00000020;
+    transition: transform .3s, background .3s;
+}
+.extra-love-card:hover {
+    transform: translateY(-6px);
+    background: #ffffff18;
+}
+.extra-love-icon { font-size: 46px; margin-bottom: 15px; }
+.extra-love-card h3 {
+    color: #ffc1d8;
+    font-size: 23px;
+    font-weight: normal;
+    margin-bottom: 13px;
+}
+.extra-love-card p { color: #ffe5ef; line-height: 1.9; }
+.extra-love-card .btn { margin-top: 16px; cursor: pointer; }
+.secret-reveal, .miss-message {
+    display: none;
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 14px;
+    background: #ffb5d414;
+    border: 1px solid #ffb5d444;
+    line-height: 1.9;
+    color: #fff0f6;
+    animation: fadeIn .8s ease;
+}
+.secret-reveal.show, .miss-message.show { display: block; }
+.reason-list { list-style: none; margin-top: 16px; text-align: left; }
+.reason-list li {
+    padding: 10px 0;
+    color: #ffe5ef;
+    line-height: 1.7;
+    border-bottom: 1px solid #ffffff12;
+}
+.reason-list li:last-child { border-bottom: none; }
+@media (max-width: 600px) {
+    .extra-love-section { padding: 55px 15px; }
+    .extra-love-card { padding: 23px 18px; }
+}
+
+
+/* SPECIAL PROPOSAL BOX */
+.proposal-special-intro {
+    max-width: 760px;
+    margin: 0 auto 28px;
+    color: #ffe5ef;
+    line-height: 2;
+}
+.proposal-memory-box {
+    max-width: 760px;
+    margin: 22px auto;
+    padding: 23px;
+    border: 1px solid #ffb4ce66;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #ffffff12, #ffb5d40b);
+    box-shadow: 0 12px 35px #00000018;
+}
+.proposal-memory-box h3 {
+    color: #ffc1d8;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+.proposal-reveal {
+    display: none;
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 15px;
+    border: 1px solid #ffb4ce55;
+    background: #ffb5d414;
+    color: #fff0f6;
+    line-height: 2;
+    animation: fadeIn .8s ease;
+}
+.proposal-reveal.show { display: block; }
+.proposal-final-message {
+    display: none;
+    max-width: 760px;
+    margin: 28px auto 0;
+    padding: 28px 22px;
+    border-radius: 22px;
+    border: 1px solid #ffc1d8aa;
+    background: linear-gradient(135deg, #5b2149aa, #a54d7166);
+    line-height: 2;
+    animation: fadeIn 1s ease;
+}
+.proposal-final-message.show { display: block; }
+.proposal-final-message h3 {
+    color: #ffd0e1;
+    font-size: clamp(25px, 5vw, 38px);
+    font-weight: normal;
+    margin: 15px 0;
+}
+.proposal-special-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" loop preload="auto">
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<button class="btn music-button" id="musicButton"
+        onclick="toggleMusic()">
+    ▶ Play Our Music 🎵
+</button>
+
+<nav>
+    <div class="logo">♥ For My Alice</div>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#memories">Our Story</a>
+        <a href="#letter">My Letter</a>
+        <a href="#promise">My Promise</a>
+        <a href="#questions">Questions 💌</a>
+        <a href="#proposal">Proposal 💍</a>
+    </div>
+<a href="#surprises">Little Surprises ✨</a>
+</nav>
+
+<header class="hero" id="home">
+    <div class="hero-content">
+        <div class="eyebrow">A special website made with love</div>
+        <h1>Alice ♡</h1>
+        <div class="heart-line">──── ♥ ────</div>
+        <p>
+            I may not have met you in person,<br>
+            but you have become a special part of my life.<br>
+            You mean so much to me, my jaan. ❤️
+        </p>
+        <h2>My Baby, My Jaan, My Alice ❤️</h2>
+        <a href="#letter" class="btn">Open My Heart ♥</a>
+    </div>
+</header>
+
+<section class="memories" id="memories">
+    <h2 class="section-title">Our Special Story 🌸</h2>
+    <p class="section-intro">
+        Meri jaan, kuch log hamari zindagi mein aate hain
+        aur dheere dheere bohat special ban jate hain.
+        Ap meri life ka ek bohat important hissa hain. ❤️
+    </p>
+
+    <div class="memory-grid">
+        <div class="memory-card">
+            <div class="emoji">💌</div>
+            <h3>Our Beginning</h3>
+            <p>Maine apko dekhe aur mile baghair apse mohabbat ki.
+            Ap meri life mein bohat special ban gayin.</p>
+        </div>
+
+        <div class="memory-card">
+            <div class="emoji">❤️</div>
+            <h3>My Feelings</h3>
+            <p>Apki khushi, apki feelings aur apki respect
+            mere liye important hain, meri jaan.</p>
+        </div>
+
+        <div class="memory-card">
+            <div class="emoji">🌙</div>
+            <h3>I Miss You</h3>
+            <p>I miss you so much, meri baby Alice.
+            Kaash hum saath waqt guzar sakte. ❤️</p>
+        </div>
+    </div>
+</section>
+
+<section class="letter-section" id="letter">
+    <h2 class="section-title">A Letter From My Heart 💌</h2>
+    <p class="section-intro">
+        Meri baby Alice, ye letter apke liye hai.
+        Ismein woh baatein hain jo main apko dil se kehna chahta hoon.
+    </p>
+
+    <div class="envelope">
+        <div class="envelope-icon">💌</div>
+        <h3>My Baby Alice, My Jaan, My Wife ❤️</h3>
+        <p>A letter full of love, sorry, trust and promises.</p>
+        <br>
+
+        <button class="btn" id="letterButton" onclick="openLetter()">
+            Open My Letter 💗
+        </button>
+
+        <div class="letter" id="loveLetter">
+            <p>🥺❤️ <strong>Meri Baby Alice, meri Jaan, meri Wife ❤️🫂</strong></p>
+
+            <p>
+                Baby, sab se pehle main apse us din ke liye
+                dil se sorry kehta hoon, jis din meri kisi baat
+                ya harkat se ap hurt hui thin. 🥺🙏 Mera irada
+                kabhi bhi apka dil dukhane ka nahi hota, lekin
+                main samajhta hoon ke kabhi kabhi hamari baaton
+                se apne insaan ko takleef pohanch jati hai.
+                Mujhe maaf kar dena meri jaan. ❤️
+            </p>
+
+            <p>
+                Baby, main apse ek baat kehna chahta hoon.
+                Main apni poori koshish karta hoon ke apko time
+                doon, chahe main kitna bhi busy kyun na hoon.
+                Main apni masroofiyat ke darmiyan bhi apke liye
+                waqt nikalne ki koshish karta hoon, kyun ke ap
+                mere liye important hain. Main nahi chahta ke
+                apko kabhi aisa mehsoos ho ke ap meri priority
+                nahi hain. ❤️🥹
+            </p>
+
+            <p>
+                <strong>Aur baby, agar kabhi mujhse koi ghalti ho
+                jaye, meri kisi baat ka bura lag jaye, ya
+                main apko hurt kar doon, to please mujhe
+                bata dena. 🙏❤️</strong>
+                Ap mujhse naraz ho sakti hain, apko gussa aa
+                sakta hai, ap apni har baat mujhe bata sakti
+                hain. Bas ap apne dil mein baatein rakh kar
+                khud ko takleef mat dena. Main chahta hoon ke
+                hum ek doosre ko samjhein aur mil kar apni
+                problems solve karein.
+            </p>
+
+            <p>
+                Aur meri jaan, agar kabhi apka mujhse dil
+                bharne lage, apko meri kisi baat se pareshani
+                ho, ya apko lage ke main badal raha hoon, to
+                please mujhe bata dena. Main apki baat sunna
+                chahta hoon. Main nahi chahta ke ap khamoshi
+                mein pareshan hoti rahein aur mujhe pata bhi
+                na chale. 🥺🫂
+            </p>
+
+            <p>
+                <strong>Baby, please kabhi ye mat sochna ke main
+                apko chhor kar chala jaunga. ❤️</strong>
+                Main apke saath rehna chahta hoon, apka saath
+                nibhana chahta hoon aur apne rishtay ko apni
+                poori koshish se sambhalna chahta hoon. Main
+                apko ye wada karta hoon ke main apko samajhne,
+                apki izzat karne aur apke liye behtar partner
+                banne ki koshish karta rahunga. Main chahta
+                hoon ke waqt ke saath apko meri mohabbat sirf
+                mere lafzon mein nahi, mere actions mein bhi
+                nazar aaye. ❤️💍
+            </p>
+
+            <p>
+                Meri jaan, main ne apni zindagi mein bohat si
+                cheezon ko side par rakh kar apko waqt dene ki
+                koshish ki hai, kyun ke ap meri zindagi ka
+                bohat important hissa hain. Main chahta hoon
+                ke hum dono apni apni zindagi ko bhi behtar
+                banayein aur ek doosre ka sahara bhi banein.
+                Main chahta hoon ke hum apna rishta mohabbat,
+                trust aur respect ke saath nibhayein. 🥹❤️
+            </p>
+
+            <p>
+                Aur meri baby, agar kabhi ap thak jayein,
+                pareshan hon, ya apko rest ki zaroorat ho,
+                to please araam kar liya karein. Apko har
+                waqt mujhse baat karne ki zaroorat nahi hai.
+                Apki health, apka sukoon aur apki khushi bhi
+                mere liye important hai. Ap araam se soya
+                karein, apna khayal rakha karein. Main nahi
+                chahta ke meri wajah se ap par koi pressure aaye. ❤️🌸
+            </p>
+
+            <p>
+                <strong>I love you, meri baby Alice. 🥹❤️</strong>
+                Main perfect nahi hoon, mujhse ghaltiyan ho
+                sakti hain, lekin main apni ghaltiyon ko
+                samajhna aur khud ko behtar banana chahta
+                hoon. Jab bhi humare darmiyan koi narazgi
+                ho, main chahta hoon ke hum ek doosre se
+                baat karein, ek doosre ko samjhein aur apne
+                rishtay ko aur mazboot banayein.
+            </p>
+
+            <p>
+                Ap meri zindagi mein bohat special hain,
+                meri jaan. Main apko khona nahi chahta;
+                main apke saath ek aisa rishta banana chahta
+                hoon jahan ap bina dare apni har baat keh
+                sakein, jahan apko mohabbat ke saath izzat
+                aur sukoon bhi mile.
+            </p>
+
+            <p>
+                <strong>Please apna khayal rakha karein, meri baby.
+                Rest kiya karein, time par soya karein aur
+                jab bhi apka dil pareshan ho, mujhse baat
+                kar liya karein. 🫂❤️</strong>
+            </p>
+
+            <p>
+                <strong>I LOVE YOU, MERI BABY ALICE. ❤️<br>
+                I MISS YOU SO MUCH, MERI JAAN. 🥺🫂</strong>
+            </p>
+
+            <p>
+                Apka Arslan, jo apko samajhne, apka saath
+                nibhane aur har din apke liye behtar banne
+                ki poori koshish karega. 💍❤️
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="promise" id="promise">
+    <h2 class="section-title">A Promise From My Heart 🤍</h2>
+
+    <div class="promise-box">
+        <p>
+            My jaan, I promise to keep trying to understand you,
+            listen when you need to talk, and respect your feelings.
+            <br><br>
+            Main chahta hoon ke apko meri mohabbat mere lafzon
+            ke saath mere actions mein bhi nazar aaye.
+            <br><br>
+            Main chahta hoon ke hum apni problems par baat karein,
+            ek doosre ki feelings ko samjhein aur apne rishte ko
+            trust, honesty aur respect ke saath nibhayein.
+            <br><br>
+            <strong>You are special to me, my Baby Alice. ❤️🌸</strong>
+        </p>
+    </div>
+</section>
+
+<section class="question-section" id="questions">
+    <div class="question-box">
+        <div class="question-icon">💌</div>
+        <p class="question-label">A FEW QUESTIONS FROM MY HEART</p>
+        <h2>My Baby Alice ❤️🥹</h2>
+
+        <p class="question-intro">
+            Meri jaan, main apse kuch baatein poochna chahta hoon.
+            Please mujhe honestly batana, kyun ke apki feelings
+            mere liye bohat important hain. ❤️
+        </p>
+
+        <div class="question-item">
+            <span>01</span>
+            <p>Meri jaan, kya main apki life mein importance rakhta hoon?
+            Kya main apke liye special hoon? 🥹❤️</p>
+        </div>
+
+        <div class="question-item">
+            <span>02</span>
+            <p>Kya mujhse baat karke apko happy feel hota hai?
+            Kya meri presence apke chehre par smile lati hai? 🫂💗</p>
+        </div>
+
+        <div class="question-item">
+            <span>03</span>
+            <p>Kya ap mere saath apni feelings share karne mein
+            comfortable feel karti hain? ❤️</p>
+        </div>
+
+        <div class="question-item">
+            <span>04</span>
+            <p>Agar meri kisi baat se ap hurt hoti hain ya apko
+            mujhse koi shikayat hai, to please mujhe bata dena.
+            Main apki baat samajhna chahta hoon. 🥺</p>
+        </div>
+
+        <div class="question-item">
+            <span>05</span>
+            <p>Kya koi aisi cheez hai jo main apke liye aur behtar
+            kar sakta hoon, taake ap hamare rishte mein zyada
+            khush aur comfortable feel karein? 🌸</p>
+        </div>
+
+        <div class="question-item">
+            <span>06</span>
+            <p>Meri jaan, ap hamare rishte ke baare mein dil se
+            kya feel karti hain? Please apni real feelings
+            mere saath share karna. ❤️</p>
+        </div>
+
+        <div class="honest-note">
+            🥹❤️ Meri Baby Alice, please in sawalon ka jawab
+            zaroor dena. Ap jo bhi feel karti hain, bina kisi
+            pressure ke mujhe sach bata sakti hain. Apki feelings
+            mere liye important hain aur main apki baat sunna chahta hoon. 💌
+        </div>
+
+        <label for="aliceResponse" class="response-label">
+            💗 Your Answer, My Jaan
+        </label>
+
+        <textarea id="aliceResponse"
+            placeholder="Meri jaan, yahan apne dil ki baat likhein... ❤️"
+            rows="6"></textarea>
+
+        <button class="btn" onclick="sendAliceResponse()">
+            Send Your Answer 💌
+        </button>
+
+        <p id="responseMessage" class="response-message"></p>
+    </div>
+</section>
+
+
+<section class="extra-love-section" id="surprises">
+    <h2 class="section-title">Little Surprises for My Alice ✨</h2>
+    <p class="section-intro">
+        Meri jaan, ye chhote chhote boxes sirf apke liye hain.
+        Jab dil kare, inhein open karna aur meri baat parhna. ❤️
+    </p>
+
+    <div class="extra-love-grid">
+        <div class="extra-love-card">
+            <div class="extra-love-icon">💗</div>
+            <h3>Reasons You Are Special</h3>
+            <p>Baby, ap meri nazron mein bohat special hain. 🌸</p>
+            <ul class="reason-list">
+                <li>♡ Apki feelings mere liye important hain.</li>
+                <li>♡ Main apki baat sunna aur apko samajhna chahta hoon.</li>
+                <li>♡ Apka apna andaaz apko unique banata hai.</li>
+                <li>♡ Main apke saath trust aur respect wala rishta chahta hoon.</li>
+                <li>♡ Apki khushi aur sukoon important hain.</li>
+                <li>♡ Ap meri life ka special hissa hain, meri jaan. ❤️</li>
+            </ul>
+        </div>
+
+        <div class="extra-love-card">
+            <div class="extra-love-icon">🔐</div>
+            <h3>A Little Secret Message</h3>
+            <p>Baby, button click karein aur secret message parhein. 💌</p>
+            <button class="btn" type="button" onclick="revealSecret()">Reveal My Secret 💖</button>
+            <div class="secret-reveal" id="secretMessage">
+                Meri Baby Alice, ❤️<br><br>
+                Apki feelings mere liye important hain. Main apki baat sunna,
+                apko samajhna aur apke saath respect aur honesty se rishta
+                nibhana chahta hoon. Ap apni feelings bina dare share kar sakti hain.
+                I love you, meri jaan. 🫂🌷
+            </div>
+        </div>
+
+        <div class="extra-love-card">
+            <div class="extra-love-icon">🌙</div>
+            <h3>Read This When You Miss Me</h3>
+            <p>Jab meri yaad aaye, ye message open kar lena. 🥹</p>
+            <button class="btn" type="button" onclick="toggleMissMessage()">Open When You Miss Me 🫂</button>
+            <div class="miss-message" id="missMessage">
+                Meri jaan, ❤️<br><br>
+                Jab meri yaad aaye to apna khayal rakhna, araam karna aur yaad
+                rakhna ke apki feelings matter karti hain. Jab ap baat karna
+                chahein, hum araam se baat kar sakte hain.
+                Sending you a big virtual hug. ❤️🌸
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="proposal" id="proposal">
+    <div class="ring">💍</div>
+
+    <p style="letter-spacing:4px;color:#ffd0e1;">A LITTLE MEMORY OF US ❤️</p>
+    <h2>Will You Marry Me, Alice? 💍</h2>
+
+    <p class="proposal-special-intro">
+        Meri Baby Alice, meri jaan… ❤️🥹<br><br>
+        Yaad hai jab humari baat shuru hui thi? Sab se pehle apne mujhe “I love you” kaha tha…
+        aur phir mujhse poocha tha ke kya main apse shaadi karna chahunga. 🥹❤️
+        <br><br>
+        Shayad apko nahi pata ke apki woh baat mere liye kitni special hai.
+        Aaj main chahta hoon ke humari us pyari si yaad ko dobara apke liye special banaun. 💗
+    </p>
+
+    <div class="proposal-memory-box">
+        <div style="font-size:42px;margin-bottom:12px;">💌🌹</div>
+        <h3>Our First Words 💗</h3>
+        <p>Ek chhoti si click, aur humari story ki woh pyari si yaad…</p>
+        <button class="btn" type="button" onclick="toggleProposalReveal('firstWords', this, 'Open Our First Words 💌', 'Close Our First Words 💗')">Open Our First Words 💌</button>
+        <div class="proposal-reveal" id="firstWords">
+            Meri jaan, humari baat ki shuruaat mein apne sab se pehle mujhe “I love you” kaha tha. ❤️
+            Phir apne mujhse poocha tha ke kya main apse shaadi karna chahunga.
+            <br><br>
+            Woh alfaaz humari kahani ka bohat pyara hissa hain. Aaj bhi unhein yaad karke mere chehre par smile aa jati hai. 🥹🌷
+        </div>
+    </div>
+
+    <div class="proposal-memory-box">
+        <div style="font-size:42px;margin-bottom:12px;">🤞❤️</div>
+        <h3>A Special Promise, My Alice</h3>
+        <p>Sirf pyare alfaaz nahi — ek dil se kiya hua promise bhi. 🌸</p>
+        <button class="btn" type="button" onclick="toggleProposalReveal('alicePromise', this, 'Read My Promise 🤞', 'Close My Promise ❤️')">Read My Promise 🤞</button>
+        <div class="proposal-reveal" id="alicePromise">
+            Main promise karta hoon ke apki baat sunne, apki feelings ko samajhne aur apke saath trust aur respect se pesh aane ki koshish karunga.
+            <br><br>
+            Main chahta hoon ke hum apni khushiyan bhi share karein aur mushkil baatein bhi honestly discuss kar sakein. Ap mere liye special hain, Alice. ❤️🫂
+        </div>
+    </div>
+
+    <div style="font-size:48px;margin:28px 0;">🌹💍🌹</div>
+    <h2>And My Answer Is… ❤️</h2>
+    <p class="proposal-special-intro">
+        Jab apne mujhse poocha tha ke kya main apse shaadi karna chahunga, to aaj main apko apna jawab phir se kehna chahta hoon. 💗
+    </p>
+    <button class="btn" type="button" onclick="showSpecialProposal()">Open My Answer, Alice 💍❤️</button>
+
+    <div class="proposal-final-message" id="specialProposalAnswer">
+        <div style="font-size:58px;">💍❤️🌹</div>
+        <h3>YES, MERI JAAN! 🥹💗</h3>
+        <p>
+            Meri Baby Alice, main apse shaadi karna chahta hoon. ❤️
+            <br><br>
+            Main chahta hoon ke hum apni zindagi mein mohabbat ke saath trust, respect, patience aur bohat si khoobsurat yaadein bhi banayein.
+            <br><br>
+            Apka woh pehla “I love you” aur apka mujhse shaadi ka sawal humari story ki meri favourite yaadon mein se hain.
+            Thank you ke apne humari kahani ko itne pyare alfaaz se shuru kiya. 🌷
+            <br><br>
+            <strong>Forever grateful that our story began with your “I love you.” 💌</strong>
+        </p>
+        <div style="font-size:40px;margin-top:18px;">💗🌹💍🌹💗</div>
+    </div>
+</section>
+
+<footer>
+    Made with love for Alice ❤️
+    <br>
+    A little website, a heartfelt message. 💌
+    <br>
+    Forever with love — Arslan 🌸
+</footer>
+ <script>
+const bgMusic = document.getElementById('bgMusic');
+const musicButton = document.getElementById('musicButton');
+
+function toggleMusic() {
+    if (bgMusic.paused) {
+        bgMusic.play().then(() => {
+            musicButton.innerHTML = "⏸ Pause Our Music ♫";
+        }).catch((err) => {
+            console.log(err);
+        });
+    } else {
+        bgMusic.pause();
+        musicButton.innerHTML = "▶ Play Our Music ♫";
+    }
+}
+
+bgMusic.addEventListener("ended", () => {
+    musicButton.innerHTML = "▶ Play Our Music ♫";
+});
+
+function openLetter() {
+    const letter = document.getElementById("loveLetter");
+    const button = document.getElementById("letterButton");
+    letter.classList.toggle("show");
+    if (letter.classList.contains("show")) {
+        button.textContent = "Close My Letter 💗";
+        setTimeout(() => {
+            letter.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }, 100);
+    } else {
+        button.textContent = "Open My Letter 💗";
+    }
+}
+
+function showProposal() {
+    const message = document.getElementById("proposalMessage");
+    message.style.display = "block";
+    setTimeout(() => {
+        message.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 100);
+}
+
+function sendAliceResponse() {
+    const answer = document.getElementById("aliceResponse").value.trim();
+    const message = document.getElementById("responseMessage");
+    if (answer === "") {
+        message.textContent = "Meri jaan, please pehle apna answer likh dein. ❤️";
+        return;
+    }
+    const subject = encodeURIComponent("Alice's Answer ❤️");
+    const body = encodeURIComponent("My Baby Alice's Response ❤️\n\n" + answer);
+    message.textContent = "Apki email app khulne ki koshish karegi. ❤️";
+    window.location.href = "mailto:?subject=" + subject + "&body=" + body;
+}
+
+
+function revealSecret() {
+    const box = document.getElementById("secretMessage");
+    if (!box) return;
+    box.classList.toggle("show");
+    const button = box.previousElementSibling;
+    if (button) {
+        button.textContent = box.classList.contains("show")
+            ? "Hide Secret Message 💗"
+            : "Reveal My Secret 💖";
+    }
+}
+
+function toggleMissMessage() {
+    const box = document.getElementById("missMessage");
+    if (!box) return;
+    box.classList.toggle("show");
+    const button = box.previousElementSibling;
+    if (button) {
+        button.textContent = box.classList.contains("show")
+            ? "Close Message 🌙"
+            : "Open When You Miss Me 🫂";
+    }
+}
+
+
+function toggleProposalReveal(id, button, openText, closeText) {
+    const box = document.getElementById(id);
+    if (!box) return;
+    box.classList.toggle('show');
+    button.textContent = box.classList.contains('show') ? closeText : openText;
+}
+
+function showSpecialProposal() {
+    const answer = document.getElementById('specialProposalAnswer');
+    if (!answer) return;
+    answer.classList.add('show');
+    if (typeof createHeart === 'function') {
+        for (let i = 0; i < 18; i++) createHeart();
+    }
+    setTimeout(() => answer.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "floating-heart";
+    heart.textContent = Math.random() > 0.5 ? "♥" : "♡";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (12 + Math.random() * 22) + "px";
+    heart.style.animationDuration = (7 + Math.random() * 5) + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => { heart.remove(); }, 12000);
+}
+setInterval(createHeart, 900);
+</script>
+</body>
+</html>
